@@ -47,5 +47,3 @@ class Doctor(Person):
         super().__init__(name, age, id, profession)
         self.pacients = []
         self.number_of_operations = 0
-
-p1 = Person('Vasya', 22, 'eblan', 38947593)
