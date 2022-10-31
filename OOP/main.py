@@ -47,3 +47,5 @@ class Doctor(Person):
         super().__init__(name, age, id, profession)
         self.pacients = []
         self.number_of_operations = 0
+print()
+sfdfghf
