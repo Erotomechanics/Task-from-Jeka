@@ -1,4 +1,5 @@
 import mysql.connector
+
 mydb = mysql.connector.connect(
     host='localhost',
     user='root',
@@ -6,4 +7,3 @@ mydb = mysql.connector.connect(
     database='my_base'
 )
 mycursor = mydb.cursor()
-
