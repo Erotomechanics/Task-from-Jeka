@@ -1,49 +1,17 @@
-class Person:
-    def __init__(self, name, age, profession, id):
-        self.name = name
-        self.age = age
-        self.profession = profession
-        self.id = id
-        self.__kgb = 5
+from base import data_input, data_output
 
-    @property
-    def name(self):
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        self._name = name
-
-    @property
-    def age(self):
-        return self._age
-
-    @age.setter
-    def age(self, age):
-        self._age = age
-
-    @property
-    def profession(self):
-        return self._profession
-
-    @profession.setter
-    def profession(self, profession):
-        self._profession = profession
-
-    @property
-    def id(self):
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        self._id = id
-
-    def add_age(self):
-        self.age += 5
-
-
-class Doctor(Person):
-    def __init__(self, name, age, id, profession):
-        super().__init__(name, age, id, profession)
-        self.pacients = []
-        self.number_of_operations = 0
+user_input = str()
+while True:
+    print('1.) Вывод данных', '2.) Ввод данных', '3.) Выход', sep='\n')
+    user_input = input()
+    if user_input == '2':
+        data_input()
+        continue
+    elif user_input == '1':
+        data_output()
+        continue
+    elif user_input == '3':
+        break
+    else:
+        print('Ошибка ввода, попробуйте ещё раз')
+        continue
